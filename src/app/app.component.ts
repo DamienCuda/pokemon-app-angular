@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Pokemon } from './pokemon';
 import { POKEMONS } from './mock-pokemon-list';
+import { BorderCardDirective } from './border-card.directive';
+import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [CommonModule]
+  imports: [CommonModule, BorderCardDirective, PokemonTypeColorPipe]
 })
 
 export class AppComponent implements OnInit{
@@ -23,7 +25,7 @@ export class AppComponent implements OnInit{
       console.log(`Vous avez selectionné ${pokemon.name} !`);
       this.pokemonSelected = pokemon;
     }else{
-      console.log(`Vous avez selectionné un pokémpn qui n'existe pas !`);
+      console.log(`Vous avez selectionné un pokémon qui n'existe pas !`);
       this.pokemonSelected = pokemon;
     }
   }
