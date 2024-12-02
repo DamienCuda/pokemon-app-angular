@@ -1,13 +1,5 @@
 <h1 class="center">Liste de Pokémons</h1>
 
-<!-- <input #input (keyup.enter)="selectPokemon(input.value)" type="number" /> -->
-<!-- <p *ngIf="pokemonSelected">
-    Le pokémon selectionné est {{ pokemonSelected.name}}
-</p>
-<p *ngIf="!pokemonSelected">
-    Aucun pokémon n'a été trouvé.
-</p> -->
-
 <main class="container">
     <div class="row">
         <article *ngFor="let pokemon of pokemonList" class="col m4 s6" id="pokemonList" data-id="{{pokemon.id}}">
