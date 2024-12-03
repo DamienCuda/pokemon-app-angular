@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AppRoutingModule } from './app.routes';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [AppRoutingModule]
+  imports: [PokemonModule, AppRoutingModule]
 })
 
 export class AppComponent{}
