@@ -9,12 +9,10 @@ import { POKEMONS } from './mock-pokemon-list';
 export class PokemonService {
 
   getPokemonList(): Pokemon[] {
-    
     return POKEMONS;
   }
 
   getPokemonbyId(pokemonId: number): Pokemon|undefined {
-
     return POKEMONS.find(pokemon => pokemon.id == pokemonId);
   }
 
