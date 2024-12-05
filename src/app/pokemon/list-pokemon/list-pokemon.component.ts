@@ -8,7 +8,11 @@ import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-list-pokemon',
-  imports: [BorderCardDirective, PokemonTypeColorPipe, CommonModule],
+  imports: [
+    BorderCardDirective,
+    PokemonTypeColorPipe,
+    CommonModule,
+  ],
   templateUrl: './list-pokemon.component.html',
 })
 
@@ -22,7 +26,8 @@ export class ListPokemonComponent implements OnInit{
   ){}
 
   ngOnInit(){
-    this.pokemonList = this.pokemonService.getPokemonList();
+    this.pokemonService.getPokemonList()
+    .subscribe(pokemonData => this.pokemonList = pokemonData);
   }
 
   goToPokemon(pokemon:Pokemon){

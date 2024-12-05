@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PokemonService } from '../pokemon.service';
 import { Pokemon } from '../pokemon';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
@@ -22,6 +22,7 @@ export class PokemonFormComponent implements OnInit{
 
   constructor(
     private pokemonService: PokemonService,
+    private router: Router
   ){}
 
   ngOnInit() {
@@ -56,6 +57,7 @@ export class PokemonFormComponent implements OnInit{
 
   onSubmit(){
     console.log('Form submited !');
+    this.router.navigate(['/pokemon', this.pokemon.id])
   }
 
 }
