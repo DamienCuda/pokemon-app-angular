@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { PokemonService } from '../pokemon.service';
 import { SearchPokemonComponent } from '../search-pokemon/search-pokemon.component';
+import { LoaderComponent } from "../loader/loader.component";
 
 @Component({
   selector: 'app-list-pokemon',
@@ -13,8 +14,9 @@ import { SearchPokemonComponent } from '../search-pokemon/search-pokemon.compone
     BorderCardDirective,
     PokemonTypeColorPipe,
     CommonModule,
-    SearchPokemonComponent
-  ],
+    SearchPokemonComponent,
+    LoaderComponent
+],
   templateUrl: './list-pokemon.component.html',
 })
 

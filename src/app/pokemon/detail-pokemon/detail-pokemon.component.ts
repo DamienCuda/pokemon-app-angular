@@ -6,14 +6,16 @@ import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
 import { Router } from '@angular/router';
 import { PokemonService } from '../pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoaderComponent } from "../loader/loader.component";
 
 @Component({
   selector: 'app-detail-pokemon',
   imports: [
     CommonModule,
     PokemonTypeColorPipe,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    LoaderComponent
+],
   templateUrl: './detail-pokemon.component.html',
 })
 

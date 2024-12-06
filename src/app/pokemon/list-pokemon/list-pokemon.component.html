@@ -1,6 +1,9 @@
 <main class="container">
     <app-search-pokemon></app-search-pokemon>
     <div class="row">
+        <div id="loaderContenair" *ngIf="!pokemonList || pokemonList.length === 0">
+            <app-loader class="offset-m3"></app-loader>
+        </div>
         <article *ngFor="let pokemon of pokemonList" class="col m4 s6" id="pokemonList" data-id="{{pokemon.id}}">
             <div class="card horizontal" pokemonBorderCard (click)="goToPokemon(pokemon)">
                 <div class="card-image">
