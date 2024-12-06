@@ -6,6 +6,7 @@ import { BorderCardDirective } from './border-card.directive';
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 import { FormsModule } from '@angular/forms';
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
+import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
 
 
 
@@ -18,7 +19,8 @@ import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
     BorderCardDirective,
     PokemonTypeColorPipe,
     FormsModule,
-    PokemonFormComponent
+    PokemonFormComponent,
+    AddPokemonComponent
   ],
 })
 

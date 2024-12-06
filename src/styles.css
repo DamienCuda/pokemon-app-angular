@@ -6,4 +6,20 @@
 
 .pokemonTypes {
     margin-top: 0.5rem;
+    color: white;
+}
+
+#addPokemonbtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+.typpeWrapper {
+    margin-block: 0.6rem;
+}
+
+.typeTag {
+    color: white;
+    font-size: 0.8rem;
 }
