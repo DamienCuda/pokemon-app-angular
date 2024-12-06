@@ -1,7 +1,5 @@
 <main class="container">
-    <div class="row">
-        <h1 class="center">Mon Pokédex</h1>
-    </div>
+    <app-search-pokemon></app-search-pokemon>
     <div class="row">
         <article *ngFor="let pokemon of pokemonList" class="col m4 s6" id="pokemonList" data-id="{{pokemon.id}}">
             <div class="card horizontal" pokemonBorderCard (click)="goToPokemon(pokemon)">
