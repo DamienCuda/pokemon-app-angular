@@ -1,5 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { inject, NgModule } from '@angular/core';
 import { ListPokemonComponent } from './pokemon/list-pokemon/list-pokemon.component';
 import { DetailPokemonComponent } from './pokemon/detail-pokemon/detail-pokemon.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -8,17 +8,38 @@ import { AddPokemonComponent } from './pokemon/add-pokemon/add-pokemon.component
 import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 
+
 export const routes: Routes = [
     // Pokemon Routes
-    { path: 'edit/pokemon/:id', component: EditPokemonComponent, canActivate: [authGuard]},
-    { path: 'pokemon/add', component: AddPokemonComponent, canActivate: [authGuard]},
-    { path: 'pokemons', component: ListPokemonComponent, canActivate: [authGuard]},
-    { path: 'pokemon/:id', component:  DetailPokemonComponent, canActivate: [authGuard]},
+    { 
+        path: 'edit/pokemon/:id',
+        component: EditPokemonComponent,
+        canActivate: [authGuard],},
+    { 
+        path: 'pokemon/add',
+        component: AddPokemonComponent,
+        canActivate: [authGuard]},
+    { 
+        path: 'pokemons',
+        component: ListPokemonComponent,
+        canActivate: [authGuard]
+    },
+    { 
+        path: 'pokemon/:id',
+        component:  DetailPokemonComponent,
+        canActivate: [authGuard],
+    },
     
     // Main Routes
-    { path: '', redirectTo: 'login', pathMatch: 'full'},
-    { path: 'login', component:  LoginComponent},
-    { path: '**', component: PageNotFoundComponent} //En dernier pour ne pas croiser avec une route existante
+    { 
+        path: '',
+        redirectTo: 'login', pathMatch: 'full'},
+    { 
+        path: 'login',
+        component:  LoginComponent},
+    { 
+        path: '**',
+        component: PageNotFoundComponent} //En dernier pour ne pas croiser avec une route existante
 ];
 
 @NgModule({

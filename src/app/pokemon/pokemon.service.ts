@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Pokemon } from './pokemon';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
-import { catchError, Observable, tap, of } from 'rxjs';
-import { response } from 'express';
+import { catchError, Observable, tap, of, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -63,7 +62,6 @@ export class PokemonService {
     );
   }
 
-
   private log(response: any){
     // console.table(response)
   }
@@ -88,4 +86,5 @@ export class PokemonService {
       'Psy'
     ];
   }
+
 }
